@@ -1,4 +1,9 @@
 
+/* Start Global Variables */
+:root {
+  --main-color: #10cab7;
+}
+/* End Global Variables */
 /* Start Global Rules */
 * {
   -webkit-box-sizing: border-box;
@@ -83,7 +88,6 @@ body {
 .header .links .icon span:last-child {
   width: 100%;
 }
-/* End Header */
 
 .header .links:hover .icon span:nth-child(2) {
   width: 100%;
@@ -99,6 +103,7 @@ body {
   min-width: 200px;
   top: calc(100% + 15px);
   display: none;
+  z-index: 1;
 }
 
 .header .container .links ul::before {
@@ -129,5 +134,41 @@ body {
 
 .header .container .links:hover ul {
   display: block;
+  /* z-index: 1; or we can do it here instead of inside ul above*/
+}
+/* End Header */
+
+/* Start Main/Landing */
+.landing {
+  background-image: url(../images/landing.jpg);
+  background-size: cover;
+  height: calc(100vh - 64px);
+  position: relative;
 }
 
+.landing .intro-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  text-align: center;
+  width: 500px;
+  max-width: 100%;
+}
+
+.landing .intro-text h1 {
+  margin: 0;
+  color: var(--main-color);
+  font-weight: bold;
+  font-size: 50px;
+}
+
+.landing .intro-text p {
+  font-size: 19px;
+  line-height: 1.8;
+}
+
+.landing .intro-text p span {
+  color: var(--main-color);
+}
+/* End Main/Landing */
