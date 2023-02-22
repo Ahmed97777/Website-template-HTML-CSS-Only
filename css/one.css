@@ -3,6 +3,9 @@
 :root {
   --main-color: #10cab7;
   --secondary-color: #2c4744;
+  --section-padding: 60px;
+  --section-background: #f6f6f6;
+  --30px: 30px;
 }
 /* End Global Variables */
 /* Start Global Rules */
@@ -10,6 +13,10 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -112,7 +119,7 @@ body {
 }
 
 .header .links .icon {
-  width: 30px;
+  width: var(--30px);
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
@@ -224,9 +231,9 @@ body {
 
 /* Start Features */
 .features {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  background-color: #f6f6f6;
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-color: var(--section-background, #10cab7);
 }
 
 .features .container {
@@ -257,14 +264,14 @@ body {
 
 /* Start Services */
 .services {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
 }
 
 .services .services-content {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 30px;
+  grid-gap: var(--30px);
   margin-top: 100px;
 }
 
@@ -320,5 +327,10 @@ body {
 
 
 /* End Services */
+
+
+
+
+
 
 
